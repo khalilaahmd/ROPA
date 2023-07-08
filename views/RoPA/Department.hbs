@@ -1,0 +1,33 @@
+{{!-- <head>Department</head>
+{{#each departments}}
+<div>
+    {{!-- <h3>{{departmentName}}</h3> --}}
+    {{!-- <h1>Compliance</h1>
+    <a href="/each/{{departmentName}}">See Details</a>
+</div>
+{{/each}} --}}
+
+<head>Department</head>
+{{#each departments}}
+  {{#if (eq departmentName 'compliance')}}
+    <div>
+      <h1>{{departmentName}}</h1>
+      <a href="/department/{{departmentName}}">See Details</a>
+    </div>
+  {{/if}}
+
+    {{#if (eq departmentName 'hr')}}
+    <div>
+      <h1>{{departmentName}}</h1>
+      <a href="/department/{{departmentName}}">See Details</a>
+    </div>
+  {{/if}}
+
+    {{#if (eq departmentName 'other')}}
+    <div>
+      <h1>{{departmentName}}</h1>
+      <a href="/department/{{departmentName}}">See Details</a>
+    </div>
+  {{/if}}
+
+{{/each}}

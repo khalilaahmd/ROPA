@@ -1,0 +1,22 @@
+<p>Login for RoPA</p>
+<form action="/auth/login" method="POST">
+
+<div class="login-container">
+    <label class="text"> Username:
+    <input type="text" name="username" class="input" placeholder="Your username"/>
+    </label>
+</div>
+
+<div class="login-container">
+    <label class="text"> Password:
+    <input type="password" name="password" class="input"/>
+    </label>
+</div>
+
+<br>
+<button type="login" class="login-button">Log In</button>
+
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}
+</form>
