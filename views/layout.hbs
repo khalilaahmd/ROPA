@@ -11,11 +11,11 @@
 
   <body>
 
-      <div class="background-home">
+      {{!-- <div class="background-home">
         <div class="link-container">
         <a class="link-home" href="/">Home</a>
         </div>
-      </div>
+      </div> --}}
 
       {{#if loggedIn}}
       <div>
@@ -37,14 +37,22 @@
       <div>
          <div class="background-login">
           <div class="link-container">
+            <a>
       <form action="/auth/logout" method="POST">
       <button class="link-login">Logout</button>
       </form>
+            </a>
           </div>
           </div>
       </div>
 
       {{else}}
+
+      <div class="background-home">
+        <div class="link-container">
+        <a class="link-home" href="/">Home</a>
+        </div>
+      </div>
 
       <div class="background-login">
         <div class="link-container">
