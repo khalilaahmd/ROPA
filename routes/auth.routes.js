@@ -44,11 +44,12 @@ bcrypt
 .then((salt) => bcrypt.hash(password, salt))
 .then((hashedPassword) => {
   // Create a user and save it in the database
-  return User.create({ username, email, password: hashedPassword });
-})
-.then(() => {
+ User.create({ username, email, hashedPassword });
   res.redirect("/auth/login");
 })
+// .then(() => {
+//   res.redirect("/auth/login");
+// })
 .catch((error) => {
   if (error instanceof mongoose.Error.ValidationError) {
     res.status(500).render("auth/signup", { errorMessage: error.message });
