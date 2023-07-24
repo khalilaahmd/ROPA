@@ -19,27 +19,27 @@
 
       {{#if loggedIn}}
       <div>
+        <div class="background-home">
+        <div class="link-container">
+      <a class="link-home" href="/homepage">RoPA</a>
+        </div>
+        </div>
+      </div>
+
+      <div>
         <div class="background-login">
         <div class="link-container">
-      <a class="link-login" href="/homepage">RoPA</a>
+        <a class="link-login" href="/auth/profile">Profile</a>
         </div>
         </div>
       </div>
 
       <div>
-        <div class="background-signup">
-        <div class="link-container">
-        <a class="link-signup" href="/auth/profile">Profile</a>
-        </div>
-        </div>
-      </div>
-
-      <div>
-         <div class="background-login">
+         <div class="background-signup">
           <div class="link-container">
             <a>
       <form action="/auth/logout" method="POST">
-      <button class="link-login">Logout</button>
+      <button class="link-signup">Logout</button>
       </form>
             </a>
           </div>
@@ -69,7 +69,9 @@
       {{/if}}
 
 
+
     {{{body}}}
+
 
   </body>
 

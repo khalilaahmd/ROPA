@@ -1,6 +1,7 @@
 // connect to mongoose
 const mongoose = require ('mongoose')
 
+// const MONGO_URI = process.env.URI || 'mongodb://127.0.0.1:27017/RoPA-Project';
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/RoPA-Project';
 mongoose
         .connect(MONGO_URI)
