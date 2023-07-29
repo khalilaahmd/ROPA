@@ -42,9 +42,9 @@ router.post('/signup', (req, res, next) => {
 bcrypt
 .genSalt(saltRounds)
 .then((salt) => bcrypt.hash(password, salt))
-.then((hashedPassword) => {
+.then((passwordHash) => {
   // Create a user and save it in the DB
-  return User.create({ username, email, hashedPassword });
+  return User.create({ username, email, passwordHash });
 })
 .then(() => {
   res.redirect("/auth/login");
