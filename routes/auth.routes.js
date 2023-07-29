@@ -43,7 +43,7 @@ bcrypt
 .genSalt(saltRounds)
 .then((salt) => bcrypt.hash(password, salt))
 .then((hashedPassword) => {
-  // Create a user and save it in the database
+  // Create a user and save it in the DB
   return User.create({ username, email, password: hashedPassword });
 })
 .then(() => {
